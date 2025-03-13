@@ -1,5 +1,5 @@
 import { Server } from "socket.io";
-import { Message } from "../models/message.model";
+import { Message } from "../models/message.model.js";
 import dotenv from "dotenv";
 
 dotenv.config();
