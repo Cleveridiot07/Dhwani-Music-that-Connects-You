@@ -5,6 +5,7 @@ import SignInOAuthButtons from "./SignInOAuthButtons";
 import { useAuthStore } from "@/stores/useAuthStore";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
+import SearchBar from "@/layout/components/SearchBar";
 
 const Topbar = () => {
 	const { isAdmin } = useAuthStore();
@@ -20,6 +21,7 @@ const Topbar = () => {
 				<img src='/DhwaniLogo.png' className='size-8' alt='Spotify logo' />
 				Dhwani
 			</div>
+			<SearchBar />
 			<div className='flex items-center gap-4'>
 				{isAdmin && (
 					<Link to={"/admin"} className={cn(buttonVariants({ variant: "outline" }))}>

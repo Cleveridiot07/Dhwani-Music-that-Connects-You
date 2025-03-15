@@ -2,9 +2,29 @@
 <html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/DhwaniLogo.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dhwani</title>
+		<title>Dhwani - Your Music Hub</title>
+		<meta name="description" content="Dhwani - Listen to your favorite songs, explore trending music, and discover new artists." />
+		<meta name="keywords" content="music, songs, trending, playlist, Dhwani" />
+		<meta name="author" content="Dhwani Team" />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/DhwaniLogo.png" />
+
+		<!-- Preload Important Assets -->
+		<link rel="preload" href="/DhwaniLogo.png" as="image" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Vite HMR (for development) -->
+		<script type="module">
+			import RefreshRuntime from "/@react-refresh";
+			RefreshRuntime.injectIntoGlobalHook(window);
+			window.$RefreshReg$ = () => {};
+			window.$RefreshSig$ = () => (type) => type;
+			window.__vite_plugin_react_preamble_installed__ = true;
+		</script>
+		<!-- <script type="module" src="/@vite/client"></script> -->
 	</head>
 	<body>
 		<div id="root"></div>
