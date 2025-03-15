@@ -18,7 +18,7 @@ const Topbar = () => {
     '
 		>
 			<div className='flex gap-2 items-center'>
-				<img src='/DhwaniLogo.png' className='size-8' alt='Spotify logo' />
+				<img src='/DhwaniLogo.png' className='size-8 rounded-md' alt='Spotify logo' />
 				Dhwani
 			</div>
 			<SearchBar />
