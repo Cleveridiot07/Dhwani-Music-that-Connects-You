@@ -3,6 +3,7 @@ import { Slider } from "@/components/ui/slider";
 import { usePlayerStore } from "@/stores/usePlayerStore";
 import { Laptop2, ListMusic, Mic2, Pause, Play, Repeat, Shuffle, SkipBack, SkipForward, Volume1 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import ComingSoon from "@/layout/components/ComingSoon";
 
 const formatTime = (seconds: number) => {
 	const minutes = Math.floor(seconds / 60);
@@ -17,6 +18,7 @@ export const PlaybackControls = () => {
 	const [currentTime, setCurrentTime] = useState(0);
 	const [duration, setDuration] = useState(0);
 	const audioRef = useRef<HTMLAudioElement | null>(null);
+	const [comingSoonComponent, setComingSoonComponent] = useState(false);
 
 	useEffect(() => {
 		audioRef.current = document.querySelector("audio");
@@ -43,6 +45,14 @@ export const PlaybackControls = () => {
 		};
 	}, [currentSong]);
 
+	const handleOpenComingSoon = () => {
+		setComingSoonComponent(true);
+		setTimeout(() => {
+			setComingSoonComponent(false);
+		}
+		, 3000);
+	}
+
 	const handleSeek = (value: number[]) => {
 		if (audioRef.current) {
 			audioRef.current.currentTime = value[0];
@@ -51,6 +61,7 @@ export const PlaybackControls = () => {
 
 	return (
 		<footer className='h-20 sm:h-24 bg-zinc-900 border-t border-zinc-800 px-4'>
+			<ComingSoon visible={comingSoonComponent}/>
 			<div className='flex justify-between items-center h-full max-w-[1800px] mx-auto'>
 				{/* currently playing song */}
 				<div className='hidden sm:flex items-center gap-4 min-w-[180px] w-[30%]'>
@@ -134,13 +145,13 @@ export const PlaybackControls = () => {
 				</div>
 				{/* volume controls */}
 				<div className='hidden sm:flex items-center gap-4 min-w-[180px] w-[30%] justify-end'>
-					<Button size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
+					<Button onClick={handleOpenComingSoon} size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
 						<Mic2 className='h-4 w-4' />
 					</Button>
-					<Button size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
+					<Button onClick={handleOpenComingSoon} size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
 						<ListMusic className='h-4 w-4' />
 					</Button>
-					<Button size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
+					<Button onClick={handleOpenComingSoon} size='icon' variant='ghost' className='hover:text-white text-zinc-400'>
 						<Laptop2 className='h-4 w-4' />
 					</Button>
 
