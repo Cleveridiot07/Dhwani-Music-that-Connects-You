@@ -66,3 +66,19 @@ export const getTrendingSongs = asyncHandler(async (req: Request, res: Response)
 
 	res.json(songs);
 });
+
+
+export const searchSong = asyncHandler(async (req: Request, res: Response) => {
+    const { query } = req.query;
+
+    if (!query) {
+        return res.status(400).json({ message: "Search query is required" });
+    }
+
+    // Normalize query to lowercase for case-insensitive search
+    const songs = await Song.find({
+		title: { $regex: new RegExp(query as string, "i") } // Case-insensitive search
+    });
+
+    res.json(songs);
+});

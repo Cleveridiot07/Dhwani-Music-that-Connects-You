@@ -14,8 +14,9 @@ const httpServer = createServer(app);
 // Initialize WebSockets
 initializeSocket(httpServer);
 
+connectDB();
+
 // Start the server
 httpServer.listen(PORT, () => {
 	console.log(`🚀 Server is running on port ${PORT}`);
-	connectDB();
 });
