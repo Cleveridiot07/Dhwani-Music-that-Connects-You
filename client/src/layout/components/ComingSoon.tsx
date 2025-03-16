@@ -1,4 +1,4 @@
-import { Clock, Music2, Sparkles, Headphones, Disc3 } from "lucide-react";
+import { Clock, Disc3 } from "lucide-react";
 
 interface ComingSoonProps {
   visible: boolean;
