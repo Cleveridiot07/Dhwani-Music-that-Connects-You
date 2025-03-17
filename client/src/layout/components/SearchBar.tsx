@@ -6,6 +6,8 @@ import { debounce } from "lodash";
 import { Song } from "@/types";
 import PlayButton from "@/pages/home/components/PlayButton.js";
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Song[]>([]);
@@ -21,9 +23,9 @@ const SearchBar = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/songs/search?query=${searchTerm}`
+        `${BASE_URL}songs/search?query=${searchTerm}`
       );
-      console.log("Response", response.data);
+      // console.log("Response", response.data);
       setResults(response.data);
     } catch (error) {
       console.error("Error fetching search results:", error);
