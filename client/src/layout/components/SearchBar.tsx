@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input.js";
 import { SearchIcon, Loader2 } from "lucide-react";
 import axios from "axios";
 import { debounce } from "lodash";
 import { Song } from "@/types";
-import PlayButton from "@/pages/home/components/PlayButton";
+import PlayButton from "@/pages/home/components/PlayButton.js";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");

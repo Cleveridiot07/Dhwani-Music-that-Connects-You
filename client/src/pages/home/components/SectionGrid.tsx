@@ -1,7 +1,7 @@
 import { Song } from "@/types";
-import SectionGridSkeleton from "./SectionGridSkeleton";
-import { Button } from "@/components/ui/button";
-import PlayButton from "./PlayButton";
+import SectionGridSkeleton from "./SectionGridSkeleton.js";
+import { Button } from "@/components/ui/button.js";
+import PlayButton from "./PlayButton.js";
 import { useNavigate } from "react-router-dom";
 
 type SectionGridProps = {

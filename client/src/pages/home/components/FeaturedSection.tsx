@@ -1,6 +1,6 @@
-import { useMusicStore } from "@/stores/useMusicStore";
-import FeaturedGridSkeleton from "@/components/skeletons/FeaturedGridSkeleton";
-import PlayButton from "./PlayButton";
+import { useMusicStore } from "@/stores/useMusicStore.js";
+import FeaturedGridSkeleton from "@/components/skeletons/FeaturedGridSkeleton.js";
+import PlayButton from "./PlayButton.js";
 
 const FeaturedSection = () => {
 	const { isLoading, featuredSongs, error } = useMusicStore();

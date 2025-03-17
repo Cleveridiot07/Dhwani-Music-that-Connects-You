@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
-import { usePlayerStore } from "@/stores/usePlayerStore";
+import { Button } from "@/components/ui/button.js";
+import { Slider } from "@/components/ui/slider.js";
+import { usePlayerStore } from "@/stores/usePlayerStore.js";
 import { Laptop2, ListMusic, Mic2, Pause, Play, Repeat, Shuffle, SkipBack, SkipForward, Volume1 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import ComingSoon from "@/layout/components/ComingSoon";
+import ComingSoon from "@/layout/components/ComingSoon.js";
 
 const formatTime = (seconds: number) => {
 	const minutes = Math.floor(seconds / 60);

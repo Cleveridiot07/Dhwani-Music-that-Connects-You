@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Topbar from "@/components/Topbar";
-import { useMusicStore } from "@/stores/useMusicStore";
-import FeaturedSection from "./components/FeaturedSection";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import SectionGrid from "./components/SectionGrid";
-import { usePlayerStore } from "@/stores/usePlayerStore";
+import Topbar from "@/components/Topbar.js";
+import { useMusicStore } from "@/stores/useMusicStore.js";
+import FeaturedSection from "./components/FeaturedSection.js";
+import { ScrollArea } from "@/components/ui/scroll-area.js";
+import SectionGrid from "./components/SectionGrid.js";
+import { usePlayerStore } from "@/stores/usePlayerStore.js";
 
 
 const HomePage = () => {

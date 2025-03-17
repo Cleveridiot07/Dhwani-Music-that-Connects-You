@@ -1,4 +1,4 @@
-import { usePlayerStore } from "@/stores/usePlayerStore";
+import { usePlayerStore } from "@/stores/usePlayerStore.js";
 import { useEffect, useRef } from "react";
 
 const AudioPlayer = () => {

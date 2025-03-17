@@ -1,7 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card.js";
 import { Library } from "lucide-react";
-import AlbumsTable from "./AlbumsTable";
-import AddAlbumDialog from "./AddAlbumDialog";
+import AlbumsTable from "./AlbumsTable.js";
+import AddAlbumDialog from "./AddAlbumDialog.js";
 
 const AlbumsTabContent = () => {
 	return (

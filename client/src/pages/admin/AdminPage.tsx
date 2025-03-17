@@ -1,12 +1,12 @@
-import { useAuthStore } from "@/stores/useAuthStore";
-import Header from "./components/Header";
-import DashboardStats from "./components/DashboardStats";
+import { useAuthStore } from "@/stores/useAuthStore.js";
+import Header from "./components/Header.js";
+import DashboardStats from "./components/DashboardStats.js";
 import { Album, Music } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import SongsTabContent from "./components/SongsTabContent";
-import AlbumsTabContent from "./components/AlbumsTabContent";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs.js";
+import SongsTabContent from "./components/SongsTabContent.js";
+import AlbumsTabContent from "./components/AlbumsTabContent.js";
 import { useEffect } from "react";
-import { useMusicStore } from "@/stores/useMusicStore";
+import { useMusicStore } from "@/stores/useMusicStore.js";
 
 const AdminPage = () => {
 	const { isAdmin, isLoading } = useAuthStore();

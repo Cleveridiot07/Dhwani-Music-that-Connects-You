@@ -1,6 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useChatStore } from "@/stores/useChatStore";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar.js";
+import { ScrollArea } from "@/components/ui/scroll-area.js";
+import { useChatStore } from "@/stores/useChatStore.js";
 import { useUser } from "@clerk/clerk-react";
 import { HeadphonesIcon, Music, Users } from "lucide-react";
 import { useEffect } from "react";

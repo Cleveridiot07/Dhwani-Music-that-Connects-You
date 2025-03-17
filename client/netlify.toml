@@ -1,9 +1,14 @@
 [[headers]]
 for = "/*.js"
 [headers.values]
-Content-Type = "application/javascript; charset=UTF-8"
+  Content-Type = "text/javascript; charset=UTF-8"
 
 [[headers]]
 for = "/*.css"
 [headers.values]
-Content-Type = "text/css; charset=UTF-8"
+  Content-Type = "text/css; charset=UTF-8"
+
+[[headers]]
+for = "/static/*"
+[headers.values]
+  Content-Type = "text/javascript; charset=UTF-8"

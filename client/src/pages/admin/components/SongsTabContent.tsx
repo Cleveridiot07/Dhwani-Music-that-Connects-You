@@ -1,7 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card.js";
 import { Music } from "lucide-react";
-import SongsTable from "./SongsTable";
-import AddSongDialog from "./AddSongDialog";
+import SongsTable from "./SongsTable.js";
+import AddSongDialog from "./AddSongDialog.js";
 
 const SongsTabContent = () => {
 	return (

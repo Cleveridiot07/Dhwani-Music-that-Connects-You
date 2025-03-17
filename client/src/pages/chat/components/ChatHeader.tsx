@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { useChatStore } from "@/stores/useChatStore";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar.js";
+import { useChatStore } from "@/stores/useChatStore.js";
 
 const ChatHeader = () => {
 	const { selectedUser, onlineUsers } = useChatStore();

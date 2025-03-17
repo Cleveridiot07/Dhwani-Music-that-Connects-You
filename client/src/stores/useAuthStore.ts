@@ -1,4 +1,4 @@
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "@/lib/axios.js";
 import { create } from "zustand";
 
 interface AuthStore {
